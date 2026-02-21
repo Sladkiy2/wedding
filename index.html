@@ -35,20 +35,30 @@ aria-label='' role="img"> </div> </div> <div class='t396__elem tn-elem tn-elem__
   #rec1671267002 .t396__carrier {height:700px;}
 }
 
-/* Общие стили для всех кругов */
+/* Общие стили для всех кругов (изображений) */
 #rec1671267002 .tn-elem-circle {
   position:absolute;
   width:120px;
   height:120px;
   border-radius:50%;
-  background-position:center center;
-  background-size:cover;
-  background-repeat:no-repeat;
+  overflow: hidden; /* чтобы изображение не выходило за круг */
   box-shadow:0 4px 10px rgba(0,0,0,0.1);
   transition:transform 0.3s ease;
 }
 #rec1671267002 .tn-elem-circle:hover {
   transform:scale(1.05);
+}
+#rec1671267002 .tn-elem-circle .tn-atom {
+  width:100%;
+  height:100%;
+  border-radius:50%;
+}
+#rec1671267002 .tn-elem-circle .tn-atom__img {
+  width:100%;
+  height:100%;
+  object-fit: cover; /* или contain, если нужно вписать без обрезания */
+  border-radius:50%;
+  display: block;
 }
 
 /* Десктоп (1200px и выше) - позиционирование по центру */
@@ -99,28 +109,38 @@ aria-label='' role="img"> </div> </div> <div class='t396__elem tn-elem tn-elem__
     <div class="t396__filter" data-artboard-recid="1671267002"></div>
     
     <!-- Круг 1 -->
-    <div class='t396__elem tn-elem tn-elem-circle tn-elem-circle-1' data-elem-id='circle-1' data-elem-type='shape' data-field-top-value="50" data-field-left-value="0" data-field-height-value="120" data-field-width-value="120" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-top-res-320-value="5" data-field-left-res-320-value="0" data-field-height-res-320-value="120" data-field-width-res-320-value="120">
-      <div class='tn-atom t-bgimg' data-original='https://static.tildacdn.com/tild6534-3831-4334-b535-623635306666/grey.svg' style='background-image: url("https://static.tildacdn.com/tild6534-3831-4334-b535-623635306666/grey.svg"); border-radius: 50%;' aria-label='Цвет 1' role='img'></div>
+    <div class='t396__elem tn-elem tn-elem-circle tn-elem-circle-1' data-elem-id='circle-1' data-elem-type='image' data-field-top-value="50" data-field-left-value="0" data-field-height-value="120" data-field-width-value="120" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-top-res-320-value="5" data-field-left-res-320-value="0" data-field-height-res-320-value="120" data-field-width-res-320-value="120">
+      <div class='tn-atom'>
+        <img class='tn-atom__img' src='https://psv4.userapi.com/s/v1/d2/mYqtcUE7aw1RBzSzQuZaCwpIfC5P1tVF1pKyDsIfvYEKmZ2qoiP2SnUHp1Uh1D4z5IxyhbzFl6MvmDhP_riOM_W4L52g0-7IeAA51qGiI8A1V7xkYp519lM1ELJvWZA2O_igyrF-G_Dj/2.jpg' alt='Цвет 1' imgfield='tn_img_circle1' />
+      </div>
     </div>
     
     <!-- Круг 2 -->
-    <div class='t396__elem tn-elem tn-elem-circle tn-elem-circle-2' data-elem-id='circle-2' data-elem-type='shape' data-field-top-value="50" data-field-left-value="155" data-field-height-value="120" data-field-width-value="120" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-top-res-320-value="145" data-field-left-res-320-value="0" data-field-height-res-320-value="120" data-field-width-res-320-value="120">
-      <div class='tn-atom t-bgimg' data-original='https://static.tildacdn.com/tild6534-3831-4334-b535-623635306666/grey.svg' style='background-image: url("https://static.tildacdn.com/tild6534-3831-4334-b535-623635306666/grey.svg"); border-radius: 50%;' aria-label='Цвет 2' role='img'></div>
+    <div class='t396__elem tn-elem tn-elem-circle tn-elem-circle-2' data-elem-id='circle-2' data-elem-type='image' data-field-top-value="50" data-field-left-value="155" data-field-height-value="120" data-field-width-value="120" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-top-res-320-value="145" data-field-left-res-320-value="0" data-field-height-res-320-value="120" data-field-width-res-320-value="120">
+      <div class='tn-atom'>
+        <img class='tn-atom__img' src='https://i.pinimg.com/736x/a4/db/30/a4db3059e7fc8c99734a391b0e9a4d78.jpg' alt='Цвет 2' imgfield='tn_img_circle2' />
+      </div>
     </div>
     
     <!-- Круг 3 -->
-    <div class='t396__elem tn-elem tn-elem-circle tn-elem-circle-3' data-elem-id='circle-3' data-elem-type='shape' data-field-top-value="50" data-field-left-value="310" data-field-height-value="120" data-field-width-value="120" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-top-res-320-value="285" data-field-left-res-320-value="0" data-field-height-res-320-value="120" data-field-width-res-320-value="120">
-      <div class='tn-atom t-bgimg' data-original='https://static.tildacdn.com/tild6534-3831-4334-b535-623635306666/grey.svg' style='background-image: url("https://static.tildacdn.com/tild6534-3831-4334-b535-623635306666/grey.svg"); border-radius: 50%;' aria-label='Цвет 3' role='img'></div>
+    <div class='t396__elem tn-elem tn-elem-circle tn-elem-circle-3' data-elem-id='circle-3' data-elem-type='image' data-field-top-value="50" data-field-left-value="310" data-field-height-value="120" data-field-width-value="120" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-top-res-320-value="285" data-field-left-res-320-value="0" data-field-height-res-320-value="120" data-field-width-res-320-value="120">
+      <div class='tn-atom'>
+        <img class='tn-atom__img' src='https://i.pinimg.com/1200x/3d/50/84/3d508470af2ad2bf1707de3b9f06862f.jpg' alt='Цвет 3' imgfield='tn_img_circle3' />
+      </div>
     </div>
     
     <!-- Круг 4 -->
-    <div class='t396__elem tn-elem tn-elem-circle tn-elem-circle-4' data-elem-id='circle-4' data-elem-type='shape' data-field-top-value="50" data-field-left-value="465" data-field-height-value="120" data-field-width-value="120" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-top-res-320-value="425" data-field-left-res-320-value="0" data-field-height-res-320-value="120" data-field-width-res-320-value="120">
-      <div class='tn-atom t-bgimg' data-original='https://static.tildacdn.com/tild6534-3831-4334-b535-623635306666/grey.svg' style='background-image: url("https://static.tildacdn.com/tild6534-3831-4334-b535-623635306666/grey.svg"); border-radius: 50%;' aria-label='Цвет 4' role='img'></div>
+    <div class='t396__elem tn-elem tn-elem-circle tn-elem-circle-4' data-elem-id='circle-4' data-elem-type='image' data-field-top-value="50" data-field-left-value="465" data-field-height-value="120" data-field-width-value="120" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-top-res-320-value="425" data-field-left-res-320-value="0" data-field-height-res-320-value="120" data-field-width-res-320-value="120">
+      <div class='tn-atom'>
+        <img class='tn-atom__img' src='https://i.pinimg.com/736x/a6/84/9a/a6849afc0a0d7ce14f97e94be198c4ff.jpg' alt='Цвет 4' imgfield='tn_img_circle4' />
+      </div>
     </div>
     
     <!-- Круг 5 -->
-    <div class='t396__elem tn-elem tn-elem-circle tn-elem-circle-5' data-elem-id='circle-5' data-elem-type='shape' data-field-top-value="50" data-field-left-value="620" data-field-height-value="120" data-field-width-value="120" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-top-res-320-value="565" data-field-left-res-320-value="0" data-field-height-res-320-value="120" data-field-width-res-320-value="120">
-      <div class='tn-atom t-bgimg' data-original='https://static.tildacdn.com/tild6534-3831-4334-b535-623635306666/grey.svg' style='background-image: url("https://static.tildacdn.com/tild6534-3831-4334-b535-623635306666/grey.svg"); border-radius: 50%;' aria-label='Цвет 5' role='img'></div>
+    <div class='t396__elem tn-elem tn-elem-circle tn-elem-circle-5' data-elem-id='circle-5' data-elem-type='image' data-field-top-value="50" data-field-left-value="620" data-field-height-value="120" data-field-width-value="120" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-top-res-320-value="565" data-field-left-res-320-value="0" data-field-height-res-320-value="120" data-field-width-res-320-value="120">
+      <div class='tn-atom'>
+        <img class='tn-atom__img' src='https://i.pinimg.com/1200x/aa/93/27/aa932718802c1ffe43bcaaa48913e126.jpg' alt='Цвет 5' imgfield='tn_img_circle5' />
+      </div>
     </div>
     
   </div>
