@@ -561,4 +561,39 @@ t_onReady(function() {
 
 
 </div> <!--/allrecords--> <!-- Stat --> <script type="text/javascript">if(!window.mainTracker) {window.mainTracker='tilda';}
-window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.getElementsByTagName(o)[0],s=d.createElement(o),f=function(){n.parentNode.insertBefore(s,n);};s.type="text/javascript";s.async=true;s.key=k;s.id="tildastatscript";s.src=g;if(w.opera=="[object Opera]") {d.addEventListener("DOMContentLoaded",f,false);} else {f();}})(document,window,'dd9372af568e38fce535c63744587b56','script','https://static.tildacdn.com/js/tilda-stat-1.0.min.js');},2000);</script> </body> </html>
+window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.getElementsByTagName(o)[0],s=d.createElement(o),f=function(){n.parentNode.insertBefore(s,n);};s.type="text/javascript";s.async=true;s.key=k;s.id="tildastatscript";s.src=g;if(w.opera=="[object Opera]") {d.addEventListener("DOMContentLoaded",f,false);} else {f();}})(document,window,'dd9372af568e38fce535c63744587b56','script','https://static.tildacdn.com/js/tilda-stat-1.0.min.js');},2000);</script> 
+
+<!-- Фоновая музыка (запуск после клика, если autoplay заблокирован) -->
+<audio id="bg-music" loop preload="auto">
+  <source src="Perfect.mp3" type="audio/mpeg">
+  Ваш браузер не поддерживает аудио.
+</audio>
+
+<script>
+  (function() {
+    var audio = document.getElementById('bg-music');
+    audio.volume = 0.5; // установите желаемую громкость (от 0 до 1)
+
+    // Пытаемся запустить сразу (если браузер разрешит)
+    var playPromise = audio.play();
+
+    if (playPromise !== undefined) {
+      playPromise.catch(function() {
+        // Автовоспроизведение заблокировано – ждём первое взаимодействие
+        var startAudio = function() {
+          audio.play().catch(function(e) {
+            console.log('Не удалось запустить музыку даже после клика:', e);
+          });
+          document.removeEventListener('click', startAudio);
+          document.removeEventListener('touchstart', startAudio);
+          document.removeEventListener('keydown', startAudio);
+        };
+        document.addEventListener('click', startAudio);
+        document.addEventListener('touchstart', startAudio);
+        document.addEventListener('keydown', startAudio);
+      });
+    }
+  })();
+</script>
+
+</body> </html>
